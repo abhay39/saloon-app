@@ -148,6 +148,27 @@ const SingleSaloon = ({ route }) => {
                         </View>
                     </View>
 
+                    <View style={{
+                        padding:10
+                    }}>
+                        <LinearGradient colors={["#6F91E7", '#4DDFA1']} style={{
+                            // height:40,
+                            borderRadius:8,
+                            display:"flex",
+                            flexDirection:"row",
+                            alignItems:'center',
+                            padding:20,
+                            justifyContent:"flex-start"
+                        }}>
+                            
+                            <Text style={{
+                                fontWeight:"500",
+                                fontSize:18,
+                                color:"#FFFFFF",
+                            }}>10 Offer's Running</Text>
+                        </LinearGradient>
+                    </View>
+
                     <LinearGradient colors={["#1A1B25", '#0D0D12']} style={{
                         padding: 20,
                         paddingLeft: 25,

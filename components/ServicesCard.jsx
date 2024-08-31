@@ -53,7 +53,7 @@ const ServicesCard = ({item}) => {
       <View>
       <TouchableOpacity onPress={handle}>
             {
-                handleToogle ? (<Fontisto name="toggle-on" size={20} color="#FEAF18" />) : (<Fontisto name="toggle-off" size={20} color="white" />)
+                handleToogle ? (<Fontisto name="toggle-on" size={32} color="#FEAF18" />) : (<Fontisto name="toggle-off" size={32} color="white" />)
             }
         </TouchableOpacity>
       </View>

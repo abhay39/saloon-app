@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, Image, FlatList, StyleSheet } from 'react-native';
-import  MaterialIcons  from 'react-native-vector-icons/MaterialIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const reviews = [
   {
     id: '1',
-    name: 'Courtney Henry',
+    name: 'Pradeep Bhaiya',
     avatar: 'https://images.squarespace-cdn.com/content/v1/5fd787d32a8a4a2604b22b5d/a1a982a2-8886-4017-a735-3fde5aeab145/msbs-barbershop-perspective-22000.jpg',
     rating: 5,
     time: '2 mins ago',
@@ -13,7 +13,7 @@ const reviews = [
   },
   {
     id: '2',
-    name: 'Cameron Williamson',
+    name: 'Abhay Kumar Gupta',
     avatar: 'https://images.squarespace-cdn.com/content/v1/5fd787d32a8a4a2604b22b5d/a1a982a2-8886-4017-a735-3fde5aeab145/msbs-barbershop-perspective-22000.jpg',
     rating: 4,
     time: '2 mins ago',
@@ -21,7 +21,7 @@ const reviews = [
   },
   {
     id: '3',
-    name: 'Cameron Williamson',
+    name: 'Prateek Bhaiya',
     avatar: 'https://images.squarespace-cdn.com/content/v1/5fd787d32a8a4a2604b22b5d/a1a982a2-8886-4017-a735-3fde5aeab145/msbs-barbershop-perspective-22000.jpg',
     rating: 4,
     time: '2 mins ago',
@@ -29,7 +29,7 @@ const reviews = [
   },
 ];
 
-const Review=()=> {
+const Review = () => {
   return (
     <View style={styles.container}>
       {/* Rating Summary */}
@@ -39,9 +39,16 @@ const Review=()=> {
           {[5, 4, 3, 2, 1].map((star) => (
             <View key={star} style={styles.starRow}>
               <Text style={styles.starText}>{star}</Text>
-              <View style={styles.starBar} />
+              <View style={{
+                // flex: 1,
+                height: 5,
+                backgroundColor: '#4CAF50',
+                borderRadius: 2.5,
+                width: `${(star / 5) * 100}%`  // Dynamically set width based on the star rating
+              }} />
             </View>
           ))}
+
         </View>
         <View style={styles.averageRating}>
           <Text style={styles.ratingNumber}>4.0</Text>
@@ -109,10 +116,7 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   starBar: {
-    flex: 1,
-    height: 5,
-    backgroundColor: '#4CAF50',
-    borderRadius: 2.5,
+
   },
   averageRating: {
     alignItems: 'center',

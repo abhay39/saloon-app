@@ -118,7 +118,7 @@ const SaloonProfile = ({ route }) => {
                             }}> {details.address}</Text>
                         </View>
                         <View>
-                            <TouchableOpacity onPress={() => {
+                            {/* <TouchableOpacity onPress={() => {
                                 navigation.navigate("SaloonProfile", { details })
                             }}>
                                 <Text style={{
@@ -126,7 +126,7 @@ const SaloonProfile = ({ route }) => {
                                     fontWeight: '500',
                                     fontSize: 12
                                 }}>View Profile</Text>
-                            </TouchableOpacity>
+                            </TouchableOpacity> */}
                         </View>
                     </View>
                 </View>

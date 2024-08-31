@@ -9,13 +9,13 @@ const TotalSaloon = () => {
         flex:1,
         marginBottom:50
     }}>
-      <FlatList 
-        data={saloons}
-        keyExtractor={(saloon) => saloon.id.toString()}
-        renderItem={({ item }) => (
-          <SaloonCard item={item}/>
-        )}
-      />
+      {
+        saloons.map((item,index)=>{
+          return(
+            <SaloonCard key={index} item={item}/>
+          )
+        })
+      }
     </View>
   )
 }

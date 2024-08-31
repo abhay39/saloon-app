@@ -23,17 +23,17 @@ const SalonProfileNavigator = () => {
         borderBottomColor: '#FEBA43',
         borderWidth: 2
       },
-      tabBarStyle: {
+      tabBarStyle: {  
         backgroundColor: "#0D0D12",
       }
     }}>
-      <Tab.Screen options={{
+      <Tab.Screen key={1} options={{
         tabBarIcon: () => null, 
       }} name='Info' component={SalonInformation} />
-      <Tab.Screen options={{
+      <Tab.Screen key={2} options={{
         tabBarIcon: () => null,
       }} name='Review' component={Reviews} />
-      <Tab.Screen options={{
+      <Tab.Screen key={3} options={{
         tabBarIcon: () => null, 
       }} name='Services' component={SalonInformation} />
     </Tab.Navigator>
